@@ -1,0 +1,62 @@
+
+    <!-- Header section of the page -->
+    <header>
+      <!-- Link to navigate back to the product list in the admin panel -->
+      <a href="/admin">
+          <!-- Main heading for the administration section -->
+          <h1>Administration</h1>
+      </a>
+  </header>
+
+  <!-- Main content container -->
+  <div class="container">
+
+      <!-- Navigation menu -->
+      <nav>
+          <ul>
+              <!-- List item linking to the products section -->
+              <li><a href="/admin">Produkter</a></li>
+          </ul>
+      </nav>
+
+      <!-- Main content section for displaying products -->
+      <main>
+
+          <!-- Header for the product list section -->
+          <div class="products-header">
+              <h2>Produkter</h2>
+
+              <!-- Link to the form for adding a new product -->
+              <div>
+                  <a href="/admin/management">
+                      <!-- Button for adding a new product -->
+                      <button>
+                          Ny produkt
+                      </button>
+                  </a>
+                  </div>
+              </div>
+
+
+          <!-- Table displaying the list of products -->
+          <table id="productTable">
+              <thead>
+                  <tr>
+                      <!-- Table headers for product name, category, SKU, and price -->
+                      <th>Namn</th>
+                      <th>Kategori</th>
+                      <th>SKU</th>
+                      <th>Pris</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Loop through the products array to display each product's details -->
+                  <tr *ngFor="let product of products">
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.sku }}</td>
+                    <td>{{ product.price }} kr</td>
+              </tbody>
+          </table>
+      </main>
+  </div>

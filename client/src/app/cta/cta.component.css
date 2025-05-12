@@ -1,0 +1,17 @@
+.cta-wrapper {
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-content {
+  color: rgb(255, 255, 255);
+  text-align: center;
+
+  padding: 20px;
+}

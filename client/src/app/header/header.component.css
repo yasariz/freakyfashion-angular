@@ -1,0 +1,7 @@
+#search input {
+  text-transform: uppercase;
+}
+
+#search input::placeholder {
+  text-transform: none;
+}

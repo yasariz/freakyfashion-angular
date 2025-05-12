@@ -1,0 +1,52 @@
+<!-- Header section with logo and search/user icons -->
+<header class="site-header">
+  <section>
+      <!-- MAIN CONTAINER -->
+      <div id="container">
+
+          <!-- SHOP NAME: Link to the homepage with the shop's logo -->
+          <div id="shopName">
+              <a href="/">
+                  <img src="images/site-logo.png" alt="Site Logo">
+              </a>
+          </div>
+
+          <!-- Wrapper for search and user sections -->
+          <div class="search-user-container">
+            <!-- SEARCH SECTION -->
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                type="text"
+                id="input"
+                name="searchBox"
+                placeholder="Sök Produkter"
+                [(ngModel)]="searchTerm"
+                (keyup.enter)="onSearch()"
+              />
+
+
+            </div>
+
+            <!-- USER SECTION (Cart and User Icons) -->
+            <div id="user">
+                <div class="userIcon">
+                    <!-- Cart icon linking to the cart page -->
+                    <a href="cart.html"> <i class="fa-solid fa-basket-shopping"></i> </a>
+                    <!-- Wishlist icon -->
+                    <a href="#"> <i class="fa-solid fa-heart"></i> </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Navigation for collections on the website -->
+    <nav id="collection">
+        <div id="nyheter"><a href="nyheter.html"> Nyheter </a></div>
+        <div id="kategorier"><a href="kategorier.html"> Kategorier </a></div>
+        <div id="topplistan"><a href="topplistan.html"> Topplistan </a></div>
+        <div id="rea"><a href="rea.html"> Rea </a></div>
+        <div id="kampanjer"><a href="kampanjer.html"> Kampanjer </a></div>
+    </nav>
+</section>
+</header>

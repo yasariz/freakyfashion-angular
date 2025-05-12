@@ -1,0 +1,62 @@
+<header>
+  <a href="/admin">
+      <h1>Administration</h1>
+  </a>
+</header>
+
+<div class="container">
+  <nav>
+      <ul>
+          <li><a href="#">Produkter</a></li>
+      </ul>
+  </nav>
+
+  <div class="form-container">
+      <h1>Ny produkt</h1>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Lägg till Produkt</title>
+      </head>
+      <body>
+          <h1>Lägg till en ny produkt</h1>
+
+          <form (ngSubmit)="submitProduct()" #productForm="ngForm">
+            <label for="title">Märke</label>
+            <input type="text" placeholder="" [(ngModel)]="product.title" name="title" required />
+
+            <label for="description">Beskrivning</label>
+            <textarea id="description" [(ngModel)]="product.description" name="description" rows="4" required></textarea>
+
+            <label for="image">Bild</label>
+            <input type="file" name="image" (change)="onFileSelected($event)" required />
+
+            <label for="sku">SKU</label>
+            <input type="text" id="sku" [(ngModel)]="product.sku" name="sku" required />
+
+            <label for="price">Pris</label>
+            <input type="number" placeholder="Price" [(ngModel)]="product.price" name="price" required />
+
+            <fieldset>
+              <legend>Kategorier</legend>
+              <div *ngFor="let category of categories">
+                <label>
+                  <input
+                    type="checkbox"
+                    [checked]="product.category.includes(category)"
+                    (change)="toggleCategory(category)">
+                  {{ category }}
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit">Add Product</button>
+          </form>
+
+      </body>
+      </html>
+
+  </div>
+</div>

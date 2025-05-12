@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<!-- PRODUCT INFORMATION -->
+<div class="product-information" *ngIf="product">
+  <div class="product-overview">
+    <img [src]="'http://localhost:8000/uploads/' + product.image" alt="{{ product.title }}">
+  </div>
+  <div class="product-specifications">
+    <h1>{{ product.title }}</h1>
+    <h2>{{ product.category }}</h2>
+    <h3>{{ product.description }}</h3>
+    <h4>{{ product.price }} kr</h4>
+    <a class="btn btn-danger-gradiant btn-md border-0 text-white mt-3 text-uppercase" href="#">
+      <span>Lägg i Varukorg</span>
+    </a>
+  </div>
+</div>
+
+<div class="related-products" *ngIf="randomProducts.length">
+  <div class="related-overview">
+    <h1>Liknande Produkter</h1>
+  </div>
+  <div class="related-products-container">
+    <div class="featured-item" *ngFor="let product of randomProducts">
+      <a (click)="onRelatedProductClick(product.urlSlug)">
+        <img [src]="'/uploads/' + product.image" alt="{{ product.title }}">
+        <h1>{{ product.title }}</h1>
+        <h2>{{ product.category }}</h2>
+        <h3>{{ product.price }} kr</h3>
+      </a>
+    </div>
+  </div>
+</div>
+
+<app-information></app-information>
+<app-footer></app-footer>
