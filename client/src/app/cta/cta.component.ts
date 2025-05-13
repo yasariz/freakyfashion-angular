@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Spot1Component } from '../spots/spot1/spot1.component';
-import { Spot2Component } from '../spots/spot2/spot2.component';
-import { Spot3Component } from '../spots/spot3/spot3.component';
+import { Spot1Component } from '../cta-spots/spot1/spot1.component';
+import { Spot2Component } from '../cta-spots/spot2/spot2.component';
+import { Spot3Component } from '../cta-spots/spot3/spot3.component';
 import { RouterModule } from '@angular/router';
 
 @Component({

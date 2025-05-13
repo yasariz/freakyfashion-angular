@@ -1,0 +1,8 @@
+    <div class="spots">
+      <app-spot
+        *ngFor="let spot of spots"
+        [image]="spot.image"
+        [text]="spot.text"
+        [link]="spot.link"
+      ></app-spot>
+    </div>
