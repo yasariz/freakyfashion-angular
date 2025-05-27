@@ -6,7 +6,7 @@
           <div [id]="'product-' + (i + 1)" class="single-product">
             <div class="part-1">
               <a [routerLink]="['/product', product.urlSlug]">
-                <img [src]="'http://localhost:8000/uploads/' + product.image" alt="Product Image">
+                <img [src]="'/uploads/' + product.image" alt="Product Image">
 
               </a>
               <ul>

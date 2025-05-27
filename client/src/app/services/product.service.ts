@@ -8,7 +8,8 @@ import { environment } from '../../environments/environment'; // import environm
   providedIn: 'root',
 })
 export class ProductService {
-  private baseUrl = `${environment.apiUrl}/products`;  // use environment.apiUrl
+  private baseUrl = 'https://freakyfashion-angular.onrender.com/api/products';
+  // use environment.apiUrl
 
   constructor(private http: HttpClient) {}
 
